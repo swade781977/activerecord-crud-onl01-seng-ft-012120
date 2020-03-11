@@ -24,12 +24,20 @@
     movie = Movie.create(attributes)
   end
 
+<<<<<<< HEAD
   def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
+=======
+  def can_be_created_in_a_block(args = 1)
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
     # If no arguments are passed, use default values:
     # title == "Home Alone"
     # release_date == 1990
   
+<<<<<<< HEAD
     Movie.create(args) do |m|
+=======
+    Movie.create do |m|
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
       
     end
   end
@@ -55,9 +63,13 @@
     # title == "Title"
     # release_date == 2000
     # director == "Me"
+<<<<<<< HEAD
     Movie.find_by(title: "Title") 
     Movie.find_by(release_date: "2000") 
     Movie.find_by(director: "Me")
+=======
+    Movie.find_by(title: :title, release_date: :release_date, director: :director)
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
   end
 
   def can_find_using_where_clause_and_be_sorted
@@ -69,16 +81,27 @@
   def can_be_found_updated_and_saved
     # Updtate the title "Awesome Flick" to "Even Awesomer Flick", save it, then return it
     Movie.create(title: "Awesome Flick")
+<<<<<<< HEAD
     m = Movie.find_by(title: "Awesome Flick")
     m.title = "Even Awesomer Flick"
     m.save
+=======
+    m = Movie.find_by(title: )
+    __
+    __
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
   end
 
   def can_update_using_update_method
     # Update movie title to "Wat, huh?"
     Movie.create(title: "Wat?")
+<<<<<<< HEAD
     m = Movie.find_by(title: "Wat?")
     m.update(title: "Wat, huh?")
+=======
+    __
+    __
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
   end
 
   def can_update_multiple_items_at_once
@@ -86,18 +109,31 @@
     5.times do |i|
       Movie.create(title: "Movie_#{i}", release_date: 2000+i)
     end
+<<<<<<< HEAD
     Movie.update_all(title: "A Movie")
+=======
+    __
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
   end
 
   def can_destroy_a_single_item
     Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
+<<<<<<< HEAD
     m = Movie.find_by(title: "That One Where the Guy Kicks Another Guy Once")
     m.destroy
+=======
+    __
+    __
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
   end
 
   def can_destroy_all_items_at_once
     10.times do |i|
       Movie.create(title: "Movie_#{i}")
     end
+<<<<<<< HEAD
     Movie.destroy_all
+=======
+    __
+>>>>>>> 7d975810d875a22efeafded7c569d64418f02a82
   end
